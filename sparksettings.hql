@@ -1,4 +1,4 @@
-spark.sql.crossJoin.enabled;
+set spark.sql.crossJoin.enabled=true;
 cache table call_center;
 cache table catalog_page;
 cache table catalog_returns;
