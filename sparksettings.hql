@@ -1,3 +1,4 @@
+spark.sql.crossJoin.enabled;
 cache table call_center;
 cache table catalog_page;
 cache table catalog_returns;
