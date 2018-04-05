@@ -95,21 +95,21 @@ select channel
     , sum(profit) as profit
 from (
         select 'store channel' as channel 
-            , 'store' || s_store_id as id 
+            , concat('store', s_store_id) as id 
             , sales 
             , returns 
             , (profit - profit_loss) as profit
         from ssr
     union all
         select 'catalog channel' as channel 
-            , 'catalog_page' || cp_catalog_page_id as id 
+            , concat('catalog_page', cp_catalog_page_id) as id 
             , sales 
             , returns 
             , (profit - profit_loss) as profit
         from csr
     union all
         select 'web channel' as channel 
-            , 'web_site' || web_site_id as id 
+            , concat('web_site', web_site_id) as id 
             , sales 
             , returns 
             , (profit - profit_loss) as profit
