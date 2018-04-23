@@ -633,3 +633,33 @@ create external table web_site
 )
 row format delimited fields terminated by '|' 
 location '${hiveconf:LOCATION}/web_site';
+
+create external table datagen_counts(
+scale_factor bigint,
+call_center bigint,
+catalog_page bigint,
+catalog_returns bigint,
+catalog_sales bigint,
+customer bigint,
+customer_address bigint,
+customer_demographics bigint,
+date_dim bigint,
+household_demographics bigint,
+income_band bigint,
+inventory bigint,
+item bigint,
+promotion bigint,
+reason bigint,
+ship_mode bigint,
+store bigint,
+store_returns bigint,
+store_sales bigint,
+time_dim bigint,
+warehouse bigint,
+web_page bigint,
+web_returns bigint,
+web_sales bigint,
+web_site bigint
+)
+row format delimited fields terminated by '|' 
+location '${hiveconf:LOCATION}/datagen_counts';
